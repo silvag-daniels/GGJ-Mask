@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
 	private bool dead = false;
     private int health = 1;
 	private int coins = 0;
+
+	[Header("Combat System")]
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject bulletPrefab; 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -39,11 +43,28 @@ public class PlayerController : MonoBehaviour
 			_rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 		}
 		// Wanna Attack?
-		/*if (Input.GetButtonDown("Fire1") && _isGrounded == true && _isAttacking == false) {
-			_movement = Vector2.zero;
-			_rigidbody.velocity = Vector2.zero;
-			_animator.SetTrigger("attack");
-		}*/
+		if (Input.GetButtonDown("Fire1")) 
+        {
+            Shoot();
+        }
+    }
+
+	private void Shoot()
+    {
+        if (firePoint == null || bulletPrefab == null) return;
+
+        // Instanciamos la bala en la posición del FirePoint
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+        float direction = _facingRight ? 1f : -1f; 
+        
+
+        // Obtenemos el script de la bala y le pasamos la velocidad
+        Projectile projectileScript = bullet.GetComponent<Projectile>();
+        if (projectileScript != null)
+        {
+            projectileScript.SetDirection(direction); 
+        }
     }
 
     void FixedUpdate()
