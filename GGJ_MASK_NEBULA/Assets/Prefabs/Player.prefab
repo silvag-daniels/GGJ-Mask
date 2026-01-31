@@ -122,9 +122,9 @@ GameObject:
   - component: {fileID: 2990434399595053769}
   - component: {fileID: 6521355088600550559}
   - component: {fileID: 7985389830902559783}
-  - component: {fileID: 8730103145255659777}
+  - component: {fileID: 4876068850345701449}
   m_Layer: 7
-  m_Name: Mario
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +150,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5877364361084156491
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,6 +169,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -189,9 +192,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 2109376345
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 1645379853, guid: bd353c0e253ca174ca934fab6547905a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -201,7 +206,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &2990434399595053769
 Rigidbody2D:
@@ -289,7 +293,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8730103145255659777
+--- !u!114 &4876068850345701449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,18 +302,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5256524429662713323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7606c70ae6ef1b14bb0503a9bc3743b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d9526604f3c30446a5ee1ec9c740963, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  longIdleTime: 10
-  speed: 1.25
-  jumpForce: 3
-  groundCheck: {fileID: 5653146930119821312}
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  longIdleTime: 5
+  speed: 2.5
+  jumpForce: 2.5
+  groundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
-  groundCheckRadius: 0.025
-  coinText: {fileID: 0}
+    m_Bits: 0
+  groundCheckRadius: 0
 --- !u!1 &5357402012270783976
 GameObject:
   m_ObjectHideFlags: 0
