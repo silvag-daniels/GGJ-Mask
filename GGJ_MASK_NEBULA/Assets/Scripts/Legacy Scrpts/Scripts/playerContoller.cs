@@ -32,6 +32,8 @@ public class playerControleer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if(dead) return;
+
 		float horizontalInput = Input.GetAxisRaw("Horizontal");
 		Debug.Log("Horizontal input: " + horizontalInput);
 		_movement = new Vector2(horizontalInput, 0f);
@@ -58,13 +60,6 @@ public class playerControleer : MonoBehaviour
 		}
 	}
 
-    private IEnumerator animateDead()
-    {
-        _rigidbody.linearVelocity = new Vector2(0, 3);
-		yield return new WaitForSeconds(1.0f);
-		_rigidbody.linearVelocity = new Vector2(0, -3);
-    }
-
     void LateUpdate()
 	{
 		_animator.SetBool("idle", _movement == Vector2.zero);
@@ -89,20 +84,8 @@ public class playerControleer : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
 	}
 
-	public void damage(){
-		health--;
-		if(health < 1){
-			_animator.SetTrigger("kill");
-		}
-	}
-
 	public void die(){
 		dead = true;
-		StartCoroutine(animateDead());
-	}
-
-	public void jumpKill(){
-		_rigidbody.AddForce(Vector2.up * 4.0f, ForceMode2D.Impulse);
 	}
 
 	public void coinPickup(){

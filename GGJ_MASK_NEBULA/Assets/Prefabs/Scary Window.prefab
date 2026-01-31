@@ -285,7 +285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScaryWindow
   onAttackSprite: {fileID: 1633130336, guid: 302bc6ebae38342458c1748340a75040, type: 3}
   IdleSprite: {fileID: -1385819310, guid: 35a8c64e8c1e5e347ad567a4b3dc126f, type: 3}
+  PlayerReference: {fileID: 0}
   ScaryWindowMechanicManager: {fileID: 0}
+  killAudio: {fileID: 8300000, guid: 0c33ff7c6735c294fa77b92c4b498e66, type: 3}
   secondsToAttack: 20
   secondsBetweenAudio: 5
 --- !u!1 &8225094368910291276

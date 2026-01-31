@@ -5,7 +5,9 @@ public class ScaryWindow : MonoBehaviour
 {
     public Sprite onAttackSprite;
     public Sprite IdleSprite;
+    public GameObject PlayerReference;
     public GameObject ScaryWindowMechanicManager;
+    public AudioClip killAudio;
     public float secondsToAttack = 20f;
     public float secondsBetweenAudio = 5f;
     private float audioTimer = 0f;
@@ -13,6 +15,7 @@ public class ScaryWindow : MonoBehaviour
     private bool startMechanic = false;
     private bool isAttacking = false;
     private AudioSource audioSource;
+    private AudioClip[] audioClips = {}; // Audios de ventana abierta
     private List<Vector3> possiblePos = new List<Vector3>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -26,6 +29,7 @@ public class ScaryWindow : MonoBehaviour
         {
             possiblePos.Add(child.position);
         }
+        audioClips = Resources.LoadAll<AudioClip>("Audio/Window/Open");
     }
 
     // Update is called once per frame
@@ -39,7 +43,7 @@ public class ScaryWindow : MonoBehaviour
             audioTimer += Time.deltaTime;
             if (audioTimer >= secondsBetweenAudio)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
                 Debug.Log("Audio");
                 audioTimer = 0f;
 
@@ -61,6 +65,8 @@ public class ScaryWindow : MonoBehaviour
                     isAttacking = false;
                     attackTimer = 0f;
                     audioTimer = 0f;
+                    audioSource.PlayOneShot(killAudio);
+                    PlayerReference.SendMessage("die");
                     //FindFirstObjectByType<ScaryWindowEndGame>().PlayScreamer();
 
                 }
@@ -73,7 +79,7 @@ public class ScaryWindow : MonoBehaviour
     {
         isAttacking = true;
         this.GetComponent<SpriteRenderer>().sprite = onAttackSprite;
-        audioSource.Play();
+        audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
