@@ -78,7 +78,7 @@ public class ScaryWindow : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "BasePlayer")
+        if (collision.gameObject.tag == "BasePlayer" && isAttacking)
         {
             isAttacking = false;
             attackTimer = 0f;
