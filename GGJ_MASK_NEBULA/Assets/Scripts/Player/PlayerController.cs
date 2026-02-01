@@ -118,11 +118,6 @@ public class PlayerController : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
 	}
 
-	public void die(){
-		dead = true;
-		StartCoroutine(animateDead());
-	}
-
 	public void StartLabelControl()
 	{
 		LabelControl = !LabelControl;
