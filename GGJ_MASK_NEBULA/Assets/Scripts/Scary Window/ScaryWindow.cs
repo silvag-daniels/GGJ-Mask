@@ -66,7 +66,7 @@ public class ScaryWindow : MonoBehaviour
                     attackTimer = 0f;
                     audioTimer = 0f;
                     audioSource.PlayOneShot(killAudio);
-                    PlayerReference.SendMessage("die");
+                    PlayerReference.SendMessage("Die");
                     //FindFirstObjectByType<ScaryWindowEndGame>().PlayScreamer();
 
                 }
