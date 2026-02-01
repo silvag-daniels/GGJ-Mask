@@ -127,8 +127,12 @@ public class PlayerController : MonoBehaviour
 	public void Die()
 	{	
 		dead = true;
-		Debug.Log("Game Over: El jugador ha muerto.");
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-		Destroy(gameObject); 
+		Debug.Log("Game Over: El jugador ha muerto. Regresando al menú.");
+		
+		// Cambio: Carga directa por nombre string para evitar dependencias de índices.
+		// Asegúrate de que "MainMenu" esté agregado en File -> Build Settings.
+		SceneManager.LoadScene("MainMenu"); 
+		
+		Destroy(gameObject);
 	}
 }
