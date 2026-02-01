@@ -5,6 +5,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
 
+	[Header("General Settings")]
     public float longIdleTime = 5f;
 	public float speed = 2.5f;
 	public float jumpForce = 2.5f;
@@ -16,14 +17,19 @@ public class PlayerController : MonoBehaviour
 	private float _longIdleTimer;
 	private Vector2 _movement;
 	private bool _facingRight = false;
+	private bool LabelControl = false;
 	private bool _isGrounded;
 	private bool dead = false;
     private int health = 1;
-	private int coins = 0;
 
-	[Header("Combat System")]
+	[Header("Shoot Settings")]
     [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject bulletPrefab; 
+    [SerializeField] private GameObject bulletPrefab;
+
+	[Header("Rotation Settings")]
+	[SerializeField] private GameObject RotationManager;
+
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -35,18 +41,25 @@ public class PlayerController : MonoBehaviour
     {
 		float horizontalInput = Input.GetAxisRaw("Horizontal");
 		_movement = new Vector2(horizontalInput, 0f);
-		if ((horizontalInput < 0f && _facingRight) || (horizontalInput > 0f && !_facingRight)) {
-			Flip();
+		if(!LabelControl)
+		{
+			if ((horizontalInput < 0f && _facingRight) || (horizontalInput > 0f && !_facingRight)) {
+				Flip();
+			}
+			_isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+			if (Input.GetButtonDown("Jump") && _isGrounded) {
+				_rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+			}
+			// Wanna Attack?
+			if (Input.GetButtonDown("Fire1")) 
+			{
+				Shoot();
+			}
 		}
-		_isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-		if (Input.GetButtonDown("Jump") && _isGrounded) {
-			_rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+		else
+		{
+			RotationManager.SendMessage("Rotate", horizontalInput);
 		}
-		// Wanna Attack?
-		if (Input.GetButtonDown("Fire1")) 
-        {
-            Shoot();
-        }
     }
 
 	private void Shoot()
@@ -69,18 +82,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
 	{
-		if(!dead){
+		if(!dead && !LabelControl){
 			float horizontalVelocity = _movement.normalized.x * speed;
 			_rigidbody.linearVelocity = new Vector2(horizontalVelocity, _rigidbody.linearVelocity.y);
 		}
 	}
-
-    private IEnumerator animateDead()
-    {
-        _rigidbody.linearVelocity = new Vector2(0, 3);
-		yield return new WaitForSeconds(1.0f);
-		_rigidbody.linearVelocity = new Vector2(0, -3);
-    }
 
     void LateUpdate()
 	{
@@ -115,10 +121,11 @@ public class PlayerController : MonoBehaviour
 
 	public void die(){
 		dead = true;
-		StartCoroutine(animateDead());
 	}
 
-	public void jumpKill(){
-		_rigidbody.AddForce(Vector2.up * 4.0f, ForceMode2D.Impulse);
+	public void StartLabelControl()
+	{
+		LabelControl = !LabelControl;
+		_rigidbody.linearVelocity = Vector2.zero;
 	}
 }
