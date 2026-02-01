@@ -21,7 +21,7 @@ public class playerControleer : MonoBehaviour
 	private bool _facingRight = false;
 	private bool _isGrounded;
 	private bool dead = false;
-    private int health = 1;
+    // private int health = 1;
 	private int coins = 0;
     void Start()
     {
@@ -84,9 +84,6 @@ public class playerControleer : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
 	}
 
-	public void die(){
-		dead = true;
-	}
 
 	public void coinPickup(){
 		coins++;
