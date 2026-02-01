@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 53a974ad52b0c7a468ac91946a5b4bca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5237112949294622561
+    second: "guardi\xE1n _0"
+  - first:
+      213: 3158378519289751988
+    second: "guardi\xE1n _1"
+  - first:
+      213: -2694846870280230042
+    second: "guardi\xE1n _2"
+  - first:
+      213: 578223993043216265
+    second: "guardi\xE1n _3"
+  - first:
+      213: -1145353981453992076
+    second: "guardi\xE1n _4"
+  - first:
+      213: -5601502355121033196
+    second: "guardi\xE1n _5"
+  - first:
+      213: 7129578236543887747
+    second: "guardi\xE1n _6"
+  - first:
+      213: -3160317688819916780
+    second: "guardi\xE1n _7"
+  - first:
+      213: 3549081592209016074
+    second: "guardi\xE1n _8"
+  - first:
+      213: 5515373675602432687
+    second: "guardi\xE1n _9"
+  - first:
+      213: -4916402320819682082
+    second: "guardi\xE1n _10"
+  - first:
+      213: -4234286376351447941
+    second: "guardi\xE1n _11"
+  - first:
+      213: -3385494488506516081
+    second: "guardi\xE1n _12"
+  - first:
+      213: -2300128943379926077
+    second: "guardi\xE1n _13"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "guardi\xE1n _0"
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 264
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167ed4fda76fda840800000000000000
+      internalID: 5237112949294622561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _1"
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 209
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b96d7c8780d4db20800000000000000
+      internalID: 3158378519289751988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _2"
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 244
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bafd4ac0bf99ad0800000000000000
+      internalID: -2694846870280230042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _3"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 232
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987e2f978a3460800800000000000000
+      internalID: 578223993043216265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _4"
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 212
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ffa594f92ea10f0800000000000000
+      internalID: -1145353981453992076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _5"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 208
+        width: 40
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4103f7a39477342b0800000000000000
+      internalID: -5601502355121033196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _6"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 209
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389ed8bc1a951f260800000000000000
+      internalID: 7129578236543887747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _7"
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 197
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410618c5ecb4424d0800000000000000
+      internalID: -3160317688819916780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _8"
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 57
+        width: 48
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a050f7e77eed04130800000000000000
+      internalID: 3549081592209016074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _9"
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 42
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2d2d1e22b8a8c40800000000000000
+      internalID: 5515373675602432687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _10"
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 51
+        width: 11
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed403ae232e65cbb0800000000000000
+      internalID: -4916402320819682082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _11"
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 32
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74cb4499facc35c0800000000000000
+      internalID: -4234286376351447941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _12"
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 26
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8db68723be4401d0800000000000000
+      internalID: -3385494488506516081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "guardi\xE1n _13"
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 36
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3be30a9ec4410e0800000000000000
+      internalID: -2300128943379926077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "guardi\xE1n _0": 5237112949294622561
+      "guardi\xE1n _1": 3158378519289751988
+      "guardi\xE1n _10": -4916402320819682082
+      "guardi\xE1n _11": -4234286376351447941
+      "guardi\xE1n _12": -3385494488506516081
+      "guardi\xE1n _13": -2300128943379926077
+      "guardi\xE1n _2": -2694846870280230042
+      "guardi\xE1n _3": 578223993043216265
+      "guardi\xE1n _4": -1145353981453992076
+      "guardi\xE1n _5": -5601502355121033196
+      "guardi\xE1n _6": 7129578236543887747
+      "guardi\xE1n _7": -3160317688819916780
+      "guardi\xE1n _8": 3549081592209016074
+      "guardi\xE1n _9": 5515373675602432687
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

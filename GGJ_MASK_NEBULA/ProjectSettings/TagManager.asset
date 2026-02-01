@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerHit
   - BasePlayer
+  - Platform
   layers:
   - Default
   - TransparentFX
