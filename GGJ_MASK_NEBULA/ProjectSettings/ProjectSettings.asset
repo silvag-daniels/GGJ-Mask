@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Nebula
   productName: GGJ_MASK_NEBULA
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -869,7 +869,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 2d714d4e-8220-47f3-820c-f9eff1839b26
   framebufferDepthMemorylessMode: 0
