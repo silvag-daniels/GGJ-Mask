@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     [Header("Configuración")]
     [SerializeField] private float speed = 2f;
+    [SerializeField] private Transform respawnPoint;
     private Transform target;
 
     private void Start()
@@ -32,8 +33,15 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    public void TakeDamage(int damage) 
+
+    public void Respawn()
     {
-        TakeDamage();
+        transform.position = respawnPoint.position;
+        this.enabled = false;
+    }
+
+    public void Enable()
+    {
+        this.enabled = true;
     }
 }

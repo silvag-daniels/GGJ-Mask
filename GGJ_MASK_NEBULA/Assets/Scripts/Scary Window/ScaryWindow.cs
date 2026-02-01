@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class ScaryWindow : MonoBehaviour
 {
-    public Sprite onAttackSprite;
-    public Sprite IdleSprite;
     public GameObject PlayerReference;
     public GameObject ScaryWindowMechanicManager;
     public AudioClip killAudio;
     public float secondsToAttack = 20f;
     public float secondsBetweenAudio = 5f;
+    private Animator _animator;
     private float audioTimer = 0f;
     private float attackTimer = 0f;
     private bool startMechanic = false;
@@ -24,6 +23,7 @@ public class ScaryWindow : MonoBehaviour
     }
     void Start()
     {
+        _animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         foreach (Transform child in transform)
         {
@@ -51,7 +51,7 @@ public class ScaryWindow : MonoBehaviour
                 {
                     isAttacking = true;
                     attackTimer = 0f;
-                    this.GetComponent<SpriteRenderer>().sprite = onAttackSprite;
+                    _animator.SetTrigger("change");
                 }
             }
 
@@ -78,7 +78,7 @@ public class ScaryWindow : MonoBehaviour
     void Attack()
     {
         isAttacking = true;
-        this.GetComponent<SpriteRenderer>().sprite = onAttackSprite;
+        _animator.SetTrigger("change");
         audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
     }
 
@@ -89,7 +89,7 @@ public class ScaryWindow : MonoBehaviour
             isAttacking = false;
             attackTimer = 0f;
             audioTimer = 0f;
-            this.GetComponent<SpriteRenderer>().sprite = IdleSprite;
+            _animator.SetTrigger("change");
             moveWindow();
             Debug.Log("Fainted");
             ScaryWindowMechanicManager.SendMessage("ScaryWindowFainted");

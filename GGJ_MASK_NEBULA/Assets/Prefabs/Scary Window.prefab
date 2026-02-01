@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7821157317442036911}
   - component: {fileID: 4750689911418167308}
   - component: {fileID: 6773953004715727917}
+  - component: {fileID: 5692183427507959681}
   m_Layer: 0
   m_Name: Scary Window
   m_TagString: Untagged
@@ -118,7 +119,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70e7da01fbca5f543b271a5e3aa5dc0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -259,17 +260,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07257891, y: 0.004032016}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.42, y: 3.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.05, y: 1.05}
+  m_Size: {x: 1.9532042, y: 2.816086}
   m_EdgeRadius: 0
 --- !u!114 &6773953004715727917
 MonoBehaviour:
@@ -283,13 +284,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7f85fbd554b5443918fd784e76c890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScaryWindow
-  onAttackSprite: {fileID: 1633130336, guid: 302bc6ebae38342458c1748340a75040, type: 3}
-  IdleSprite: {fileID: -1385819310, guid: 35a8c64e8c1e5e347ad567a4b3dc126f, type: 3}
   PlayerReference: {fileID: 0}
   ScaryWindowMechanicManager: {fileID: 0}
   killAudio: {fileID: 8300000, guid: 0c33ff7c6735c294fa77b92c4b498e66, type: 3}
-  secondsToAttack: 20
+  secondsToAttack: 15
   secondsBetweenAudio: 5
+--- !u!95 &5692183427507959681
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118918250739043434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb258b6451fd6ed43a4442ecccb038c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8225094368910291276
 GameObject:
   m_ObjectHideFlags: 0

@@ -54,7 +54,8 @@ public class PlayerController : MonoBehaviour
 			// Wanna Attack?
 			if (Input.GetButtonDown("Fire1")) 
 			{
-				Shoot();
+				_animator.SetTrigger("attack");
+				//Shoot();
 			}
 		}
 		else
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour
 	{
 		_animator.SetBool("idle", _movement == Vector2.zero);
 		_animator.SetBool("isGrounded", _isGrounded);
-		_animator.SetFloat("verticalVelocity", _rigidbody.linearVelocity.y);
+		//_animator.SetFloat("verticalVelocity", _rigidbody.linearVelocity.y);
 		// Long Idle
 		if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Idle")) {
 			_longIdleTimer += Time.deltaTime;
@@ -118,21 +119,16 @@ public class PlayerController : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
 	}
 
-	public void die(){
-		dead = true;
-		StartCoroutine(animateDead());
-	}
-
 	public void StartLabelControl()
 	{
 		LabelControl = !LabelControl;
 		_rigidbody.linearVelocity = Vector2.zero;
 	}
 	public void Die()
-{	
-	dead = true;
-    Debug.Log("Game Over: El jugador ha muerto.");
-	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    Destroy(gameObject); 
-}
+	{	
+		dead = true;
+		Debug.Log("Game Over: El jugador ha muerto.");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		Destroy(gameObject); 
+	}
 }

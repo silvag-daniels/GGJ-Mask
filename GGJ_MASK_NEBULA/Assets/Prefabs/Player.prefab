@@ -313,7 +313,7 @@ Animator:
   m_GameObject: {fileID: 5256524429662713323}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8533a3b1e6a0f9346b1baece382080eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: cb03f9e67c273404b8127b8651937798, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -347,6 +347,7 @@ MonoBehaviour:
   groundCheckRadius: 0
   firePoint: {fileID: 1602287035345473650}
   bulletPrefab: {fileID: 4835599919494413058, guid: eb326ecdcd197e04eb74ade555d71595, type: 3}
+  RotationManager: {fileID: 0}
 --- !u!1 &5357402012270783976
 GameObject:
   m_ObjectHideFlags: 0
