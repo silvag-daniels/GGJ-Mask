@@ -28,6 +28,7 @@ public class Projectile : MonoBehaviour
         if (!_hasFired) return;
         _rb.linearVelocity = new Vector2(speed * _direction, 0);
     }
+// pooling
 
     private void Start()
     {
@@ -36,17 +37,18 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ignorar al jugador 
         if (collision.CompareTag("Player")) return;
-
-        if (collision.isTrigger && !collision.GetComponent<Enemy>()) return;
 
         if (collision.TryGetComponent(out Enemy enemyScript))
         {
-            enemyScript.TakeDamage(); // ¡Muere!
-            return;
+            enemyScript.TakeDamage(); 
+            Destroy(gameObject);      
+            return;                 
         }
 
-        Destroy(gameObject);
+        if (!collision.isTrigger)
+        {
+            Destroy(gameObject);
+        }
     }
 }

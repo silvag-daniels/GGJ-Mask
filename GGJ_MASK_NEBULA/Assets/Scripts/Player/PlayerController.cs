@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
 	private bool _isGrounded;
 	private bool dead = false;
     private int health = 1;
-	private int coins = 0;
+	// private int coins = 0;
 
 	[Header("Combat System")]
     [SerializeField] private Transform firePoint;
@@ -48,6 +49,11 @@ public class PlayerController : MonoBehaviour
             Shoot();
         }
     }
+
+	// private void OnDrawGizmos()
+	// {
+	// 	Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+	// }
 
 	private void Shoot()
     {
@@ -113,12 +119,14 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-	public void die(){
-		dead = true;
-		StartCoroutine(animateDead());
-	}
-
 	public void jumpKill(){
 		_rigidbody.AddForce(Vector2.up * 4.0f, ForceMode2D.Impulse);
 	}
+	public void Die()
+{	
+	dead = true;
+    Debug.Log("Game Over: El jugador ha muerto.");
+	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    Destroy(gameObject); 
+}
 }
