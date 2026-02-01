@@ -5,6 +5,7 @@ public class ScaryWindowMechanicManager : MonoBehaviour
 {
     public int windowsToWin = 5;
     public float secondsBetweenAttacks = 1.5f;
+    public GameObject Door;
     private ScaryWindow[] ScaryWindows = {};
     private bool miniGameStarted = false;
     private bool activeDelay = false;
@@ -12,7 +13,6 @@ public class ScaryWindowMechanicManager : MonoBehaviour
     void Start()
     {
         ScaryWindows = FindObjectsByType<ScaryWindow>(FindObjectsSortMode.None);
-        StartMiniGame();
     }
 
     // Update is called once per frame
@@ -58,8 +58,8 @@ public class ScaryWindowMechanicManager : MonoBehaviour
         if(windowsToWin == 0)
         {
             miniGameStarted = false;
-            //Open Bedroom door
-            Debug.Log("Open Bedroom door");
+            AudioSource audioSource = Door.GetComponent<AudioSource>();
+            Door.SetActive(false);
         }
         else
         {
