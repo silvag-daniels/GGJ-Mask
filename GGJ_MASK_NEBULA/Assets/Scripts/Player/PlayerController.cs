@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -62,6 +63,11 @@ public class PlayerController : MonoBehaviour
 		}
     }
 
+	// private void OnDrawGizmos()
+	// {
+	// 	Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+	// }
+
 	private void Shoot()
     {
         if (firePoint == null || bulletPrefab == null) return;
@@ -112,15 +118,9 @@ public class PlayerController : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
 	}
 
-	public void damage(){
-		health--;
-		if(health < 1){
-			_animator.SetTrigger("kill");
-		}
-	}
-
 	public void die(){
 		dead = true;
+		StartCoroutine(animateDead());
 	}
 
 	public void StartLabelControl()
@@ -128,4 +128,11 @@ public class PlayerController : MonoBehaviour
 		LabelControl = !LabelControl;
 		_rigidbody.linearVelocity = Vector2.zero;
 	}
+	public void Die()
+{	
+	dead = true;
+    Debug.Log("Game Over: El jugador ha muerto.");
+	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    Destroy(gameObject); 
+}
 }
